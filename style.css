@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', 'Rajdhani', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(10, 10, 12, 0.82), rgba(10, 10, 12, 0.92)), url('lxstboss.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0a0a0c;
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0d0d11;
+}
+::-webkit-scrollbar-thumb {
+    background: #282833;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+}
+
+.header .subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    color: #8f92a1;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-box input {
+    background: rgba(18, 18, 24, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 380px;
+    outline: none;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.search-box input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    background: rgba(22, 22, 30, 0.95);
+}
+
+.search-box input::placeholder {
+    color: #5d6175;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.role-section {
+    margin-bottom: 45px;
+}
+
+.role-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.role-title span {
+    color: #5d6175;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: rgba(18, 18, 24, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card.founder-card {
+    border-color: rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg, rgba(35, 28, 15, 0.75), rgba(18, 18, 24, 0.85));
+}
+
+.card.founder-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.card.leader-card {
+    border-color: rgba(220, 53, 69, 0.3);
+    background: linear-gradient(135deg, rgba(35, 15, 18, 0.75), rgba(18, 18, 24, 0.85));
+}
+
+.card.leader-card:hover {
+    border-color: #dc3545;
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.25);
+}
+
+.avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: #121218;
+    flex-shrink: 0;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    overflow: hidden;
+}
+
+.card-info h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.badge-founder {
+    color: #ffd700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.badge-leader {
+    color: #ff4747;
+    text-shadow: 0 0 8px rgba(255, 71, 71, 0.4);
+}
+
+.badge-member {
+    color: #00d2ff;
+    text-shadow: 0 0 8px rgba(0, 210, 255, 0.4);
+}
+
+.fb-link {
+    color: #4267B2;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+    margin-top: 2px;
+}
+
+.fb-link:hover {
+    color: #6d8cd2;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+}
